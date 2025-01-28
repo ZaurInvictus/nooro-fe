@@ -1,4 +1,4 @@
-## Initializing the Project
+# Initializing the Project
 
 To initialize the project, follow these steps:
 
@@ -10,7 +10,7 @@ To initialize the project, follow these steps:
 
 2. Navigate to the project directory:
 
-    ```bash
+```bash
     cd nooro-fe
     ```
 
@@ -35,7 +35,4 @@ To initialize the project, follow these steps:
     ```
 
 6. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-
-
 

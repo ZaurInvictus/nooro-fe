@@ -12,7 +12,6 @@ import { toast } from "sonner";
 
 export default function Home() {
   const [tasks, setTasks] = useState<Task[]>([]);
-  const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
@@ -23,10 +22,10 @@ export default function Home() {
     try {
       const fetchedTasks = await getTasks();
       setTasks(fetchedTasks);
-      setError(null);
       setIsLoading(false);
     } catch {
-      setError("Failed to fetch tasks. Please try again later.");
+      setIsLoading(false);
+      toast.error("Failed to fetch tasks. Please try again later.");
     }
   };
 
@@ -53,7 +52,6 @@ export default function Home() {
             <p className="text-[14px] leading-[1]">Create Task</p>{" "}
             <CirclePlus className="size-[14px] p-0 m-0" />
           </Link>
-          {error && <p className="text-red-500 mb-4">{error}</p>}
           <div className="w-full flex items-center justify-between mt-5">
             <div className="flex items-center justify-start gap-2">
               <p className="text-customBlue text-sm">Tasks</p>
