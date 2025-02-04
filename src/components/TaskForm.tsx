@@ -95,7 +95,7 @@ export default function TaskForm({
           onChange={(e) => setTitle(e.target.value)}
           required
           placeholder="Enter your title"
-          className="mt-2 block w-full rounded-md 0 text-sm px-3 bg-[#262626] h-[40px] shadow-sm "
+          className="mt-2 block w-full rounded-md 0 text-sm px-3 bg-[#262626] xl:p-4 shadow-sm"
         />
       </div>
       <div>
